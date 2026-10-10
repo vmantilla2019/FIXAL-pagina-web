@@ -54,7 +54,81 @@ h1 {
   text-align: center;
   padding: 1rem;
 }
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 .5em;
+}
+h3 { font-size: 1.15rem; font-weight: 700; line-height: 1.15; margin: 0 0 .5em; }
 
+.seccion { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+.intro { color: #4a5057; margin-bottom: 2.5rem; font-size: 1.1rem; }
+
+/* Franja de seguridad industrial */
+.franja {
+  height: 14px;
+  background: repeating-linear-gradient(135deg, var(--amarillo) 0 18px, var(--carbon) 18px 36px);
+}
+
+.servicios { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, 1fr); }
+
+.servicio {
+  background: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  border-top: 6px solid var(--amarillo);
+  padding: 1.75rem;
+}
+
+.icono {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1rem;
+  fill: none;
+  stroke: var(--carbon);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.servicio ul { margin: 0; padding-left: 1.2rem; }
+.servicio li { margin-bottom: .3rem; }
+.servicio li::marker { color: var(--amarillo); }
+.agenda { display: grid; gap: 3rem; grid-template-columns: .9fr 1.1fr; align-items: start; }
+
+.form { background: var(--blanco); border: 2px solid var(--carbon); padding: 1.75rem; }
+.campo { margin-bottom: 1.1rem; }
+.fila { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+
+label { display: block; font-weight: 700; font-size: .95rem; margin-bottom: .3rem; }
+
+input, select, textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--carbon);
+  padding: .7rem .8rem;
+  background: var(--blanco);
+  border: 2px solid #9aa0a6;
+  border-radius: 4px;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--carbon); }
+input:user-invalid, select:user-invalid { border-color: #b3261e; }
+
+.btn--ancho { width: 100%; }
+.estado { margin: 1rem 0 0; font-weight: 500; }
+.estado.error { color: #b3261e; }
+
+.enlace { font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+/* Foco visible para quien navega con teclado */
+:focus-visible { outline: 3px solid var(--carbon); outline-offset: 3px; }
+.oscuro :focus-visible { outline-color: var(--amarillo); }
 @media (max-width: 860px) {
   .hero__interior { grid-template-columns: 1fr; }
+  .servicios { grid-template-columns: 1fr; }
+  .agenda { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .fila { grid-template-columns: 1fr; }
 }

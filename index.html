@@ -31,6 +31,125 @@
       </div>
     </div>
   </section>
+  <div class="franja" aria-hidden="true"></div>
+
+<section id="servicios" class="seccion">
+  <div class="contenedor">
+    <h2>Nuestros servicios</h2>
+    <p class="intro">Cuatro áreas de especialidad para que su operación no se detenga.</p>
+
+    <div class="servicios">
+      <article class="servicio">
+        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2"/><path d="M6 16h36M6 22h36M6 28h36M6 34h36"/></svg>
+        <h3>Soluciones para muelles de carga</h3>
+        <ul>
+          <li>Sellos de andén</li>
+          <li>Rampas niveladoras</li>
+          <li>Cortinas enrollables</li>
+          <li>Puertas seccionales</li>
+          <li>Cortinas de aire</li>
+        </ul>
+      </article>
+
+      <article class="servicio">
+        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4"/><path d="M24 20c-2-8 2-14 8-14 4 0 4 6-2 10l-4 4zM28 24c8-2 14 2 14 8 0 4-6 4-10-2l-4-4zM24 28c2 8-2 14-8 14-4 0-4-6 2-10l4-4zM20 24c-8 2-14-2-14-8 0-4 6-4 10 2l4 4z"/></svg>
+        <h3>Climatización / HVAC</h3>
+        <ul>
+          <li>Instalación de aires acondicionados</li>
+          <li>Mantenimiento de aires acondicionados</li>
+          <li>Extractores e inyectores de aire</li>
+        </ul>
+      </article>
+
+      <article class="servicio">
+        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4L10 27h12l-3 17 19-24H26z"/></svg>
+        <h3>Soluciones electromecánicas</h3>
+        <ul>
+          <li>Electricidad industrial</li>
+          <li>Automatización eléctrica</li>
+          <li>Mantenimiento completo de montacargas</li>
+        </ul>
+      </article>
+
+      <article class="servicio">
+        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="30" height="12" rx="2"/><path d="M36 12h6v12H24v8"/><rect x="20" y="32" width="8" height="12" rx="1"/></svg>
+        <h3>Pintura</h3>
+        <ul>
+          <li>Servicios de pintura</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="agenda" class="seccion">
+  <div class="contenedor agenda">
+    <div class="agenda__texto">
+      <h2>Agende su cita por WhatsApp</h2>
+      <p>Complete el formulario y se abrirá WhatsApp con su solicitud lista para enviar. Nuestro equipo la recibirá y le confirmará la cita.</p>
+    </div>
+
+    <form id="form-cita" class="form" novalidate>
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+      </div>
+
+      <div class="campo">
+        <label for="empresa">Empresa (opcional)</label>
+        <input type="text" id="empresa" name="empresa" autocomplete="organization">
+      </div>
+
+      <div class="campo">
+        <label for="servicio">Servicio que necesita</label>
+        <select id="servicio" name="servicio" required>
+          <option value="" selected disabled>Seleccione un servicio</option>
+          <optgroup label="Muelles de carga">
+            <option>Sellos de andén</option>
+            <option>Rampas niveladoras</option>
+            <option>Cortinas enrollables</option>
+            <option>Puertas seccionales</option>
+            <option>Cortinas de aire</option>
+          </optgroup>
+          <optgroup label="Climatización / HVAC">
+            <option>Instalación de aires acondicionados</option>
+            <option>Mantenimiento de aires acondicionados</option>
+            <option>Extractores e inyectores de aire</option>
+          </optgroup>
+          <optgroup label="Soluciones electromecánicas">
+            <option>Electricidad industrial</option>
+            <option>Automatización eléctrica</option>
+            <option>Mantenimiento de montacargas</option>
+          </optgroup>
+          <optgroup label="Pintura">
+            <option>Servicios de pintura</option>
+          </optgroup>
+          <option>Otro / no estoy seguro</option>
+        </select>
+      </div>
+
+      <div class="fila">
+        <div class="campo">
+          <label for="fecha">Fecha preferida</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+        <div class="campo">
+          <label for="hora">Hora preferida</label>
+          <select id="hora" name="hora" required>
+            <option value="" selected disabled>Seleccione</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="detalle">Cuéntenos qué necesita (opcional)</label>
+        <textarea id="detalle" name="detalle" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--ancho">Enviar solicitud por WhatsApp</button>
+      <p id="estado" class="estado" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 </main>
 </body>
 </html>
