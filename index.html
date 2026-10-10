@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIXAL | Soluciones industriales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-  <a href="#inicio" class="logo">FIX<span>AL</span></a>
+  <a href="#inicio" class="logo-enlace" aria-label="FIXAL, ir al inicio">
+  <img src="images/logo-blanco.png" alt="FIXAL">
+</a>
   <nav>
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
@@ -26,9 +31,9 @@
           <a href="#servicios" class="btn btn--borde">Ver servicios</a>
         </div>
       </div>
-      <div class="foto-pendiente" role="img" aria-label="Espacio para fotografía de trabajos reales de FIXAL">
-        <span>Fotografía de trabajos reales</span>
-      </div>
+    <img class="hero__foto" src="images/sello-de-anden.jpg"
+     alt="Sello de andén instalado por FIXAL en el andén 7 de una bodega"
+     width="1086" height="1448">
     </div>
   </section>
   <div class="franja" aria-hidden="true"></div>
@@ -43,11 +48,13 @@
         <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2"/><path d="M6 16h36M6 22h36M6 28h36M6 34h36"/></svg>
         <h3>Soluciones para muelles de carga</h3>
         <ul>
-          <li>Sellos de andén</li>
-          <li>Rampas niveladoras</li>
-          <li>Cortinas enrollables</li>
-          <li>Puertas seccionales</li>
-          <li>Cortinas de aire</li>
+           <li>Fabricación de sellos de andén a medida</li>
+           <li>Instalación y mantenimiento de sellos de andén</li>
+           <li>Instalación y mantenimiento de rampas niveladoras</li>
+           <li>Instalación y mantenimiento de puertas seccionales</li>
+           <li>Instalación y mantenimiento de cortinas enrollables</li>
+           <li>Instalación y mantenimiento de cortinas de aire</li>
+           <li>Instalación de lámparas para andén</li>
         </ul>
       </article>
 
@@ -55,9 +62,9 @@
         <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4"/><path d="M24 20c-2-8 2-14 8-14 4 0 4 6-2 10l-4 4zM28 24c8-2 14 2 14 8 0 4-6 4-10-2l-4-4zM24 28c2 8-2 14-8 14-4 0-4-6 2-10l4-4zM20 24c-8 2-14-2-14-8 0-4 6-4 10 2l4 4z"/></svg>
         <h3>Climatización / HVAC</h3>
         <ul>
-          <li>Instalación de aires acondicionados</li>
-          <li>Mantenimiento de aires acondicionados</li>
-          <li>Extractores e inyectores de aire</li>
+         <li>Instalación y mantenimiento de aires acondicionados</li>
+         <li>Sistemas extractores de aire industrial</li>
+         <li>Sistemas inyectores de aire y ventilación forzada</li>
         </ul>
       </article>
 
@@ -65,9 +72,9 @@
         <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4L10 27h12l-3 17 19-24H26z"/></svg>
         <h3>Soluciones electromecánicas</h3>
         <ul>
-          <li>Electricidad industrial</li>
-          <li>Automatización eléctrica</li>
-          <li>Mantenimiento completo de montacargas</li>
+         <li>Electricidad industrial: instalaciones, mantenimiento y corrección de fallas</li>
+         <li>Automatización eléctrica: tableros de control, PLCs y sistemas de mando</li>
+        <li>Mantenimiento integral de montacargas</li>
         </ul>
       </article>
 
@@ -75,8 +82,9 @@
         <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="30" height="12" rx="2"/><path d="M36 12h6v12H24v8"/><rect x="20" y="32" width="8" height="12" rx="1"/></svg>
         <h3>Pintura</h3>
         <ul>
-          <li>Servicios de pintura</li>
-        </ul>
+         <li>Pintura industrial: preparación de superficies y recubrimientos protectores y anticorrosivos</li>
+         <li>Intervenciones técnicas especiales bajo requerimiento</li>
+      </ul>
       </article>
     </div>
   </div>
@@ -86,6 +94,7 @@
     <div class="agenda__texto">
       <h2>Agende su cita por WhatsApp</h2>
       <p>Complete el formulario y se abrirá WhatsApp con su solicitud lista para enviar. Nuestro equipo la recibirá y le confirmará la cita.</p>
+      <p>¿Prefiere escribirnos directamente? <a href="#" data-wa class="enlace">Abrir WhatsApp</a></p>
     </div>
 
     <form id="form-cita" class="form" novalidate>
@@ -104,26 +113,27 @@
         <select id="servicio" name="servicio" required>
           <option value="" selected disabled>Seleccione un servicio</option>
           <optgroup label="Muelles de carga">
-            <option>Sellos de andén</option>
-            <option>Rampas niveladoras</option>
-            <option>Cortinas enrollables</option>
-            <option>Puertas seccionales</option>
-            <option>Cortinas de aire</option>
-          </optgroup>
-          <optgroup label="Climatización / HVAC">
-            <option>Instalación de aires acondicionados</option>
-            <option>Mantenimiento de aires acondicionados</option>
-            <option>Extractores e inyectores de aire</option>
-          </optgroup>
-          <optgroup label="Soluciones electromecánicas">
-            <option>Electricidad industrial</option>
-            <option>Automatización eléctrica</option>
-            <option>Mantenimiento de montacargas</option>
-          </optgroup>
-          <optgroup label="Pintura">
-            <option>Servicios de pintura</option>
-          </optgroup>
-          <option>Otro / no estoy seguro</option>
+          <option>Sellos de andén</option>
+          <option>Rampas niveladoras</option>
+          <option>Puertas seccionales</option>
+          <option>Cortinas enrollables</option>
+          <option>Cortinas de aire</option>
+          <option>Lámparas para andén</option>
+         </optgroup>
+         <optgroup label="Climatización / HVAC">
+         <option>Aires acondicionados</option>
+         <option>Extractores de aire industrial</option>
+         <option>Inyectores de aire y ventilación forzada</option>
+         </optgroup>
+         <optgroup label="Soluciones electromecánicas">
+         <option>Electricidad industrial</option>
+         <option>Automatización eléctrica</option>
+         <option>Mantenimiento de montacargas</option>
+      </optgroup>
+       <optgroup label="Pintura">
+       <option>Pintura industrial</option>
+    </optgroup>
+       <option>Otro / no estoy seguro</option>
         </select>
       </div>
 
@@ -151,5 +161,28 @@
   </div>
 </section>
 </main>
+<footer id="contacto" class="pie oscuro">
+  <div class="contenedor pie__interior">
+    <div>
+     <a href="#inicio" class="logo-enlace" aria-label="FIXAL, ir al inicio">
+  <img src="images/logo-blanco.png" alt="FIXAL">
+</a>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <p><a href="#" data-wa class="enlace">Escríbanos por WhatsApp</a></p>
+      <p>Bucaramanga, Santander, Colombia</p>
+    </div>
+  </div>
+  <div class="contenedor pie__legal">
+    <p>© <span id="anio">2026</span> FIXAL. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<a href="#" data-wa class="flotante" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h24a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H14l-7 6v-6H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
+<script src="script.js"></script>
 </body>
 </html>
