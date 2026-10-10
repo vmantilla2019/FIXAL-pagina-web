@@ -1,0 +1,13 @@
+:root {
+  --amarillo: #FFC107;
+  --carbon: #11151A;
+  --gris-oscuro: #2B2F33;
+  --gris-claro: #D8DADD;
+  --blanco: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--carbon);
+}
