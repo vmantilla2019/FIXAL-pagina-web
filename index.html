@@ -10,15 +10,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-  <a href="#inicio" class="logo-enlace" aria-label="FIXAL, ir al inicio">
-  <img src="images/logo-blanco.png" alt="FIXAL">
-</a>
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#agenda">Agendar cita</a>
-  </nav>
+<header class="encabezado oscuro">
+  <div class="contenedor encabezado__interior">
+    <a href="#inicio" class="logo-enlace" aria-label="FIXAL, ir al inicio">
+      <img src="images/logo-blanco.png" alt="FIXAL">
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#agenda">Agendar cita</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#agenda" class="btn btn--chico">Agendar cita</a>
+  </div>
 </header>
 <main>
   <section id="inicio" class="hero oscuro">
@@ -31,9 +34,8 @@
           <a href="#servicios" class="btn btn--borde">Ver servicios</a>
         </div>
       </div>
-    <img class="hero__foto" src="images/sello-de-anden.jpg"
-     alt="Sello de andén instalado por FIXAL en el andén 7 de una bodega"
-     width="1086" height="1448">
+    <img class="hero__foto" src="images/victor.jpg"
+     alt="Imagen de fondo industrial ">
     </div>
   </section>
   <div class="franja" aria-hidden="true"></div>
