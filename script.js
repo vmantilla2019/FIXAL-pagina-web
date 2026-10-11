@@ -1,15 +1,11 @@
-/* ===== CONFIGURACIÓN: aquí se cambian los datos del negocio ===== */
+
 const CONFIG = {
-  // Número con código de país, solo dígitos, sin "+" ni espacios.
-  // Ejemplo Colombia: "573001234567"
-  whatsapp: "573132505985",
+  whatsapp: "573224254248",
   nombreNegocio: "FIXAL",
-  // Horario de citas, en formato 24 h
   horaInicio: 8,
   horaFin: 17
 };
 
-/* ===== Funciones de ayuda ===== */
 function enlaceWhatsApp(mensaje) {
   return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(mensaje);
 }
@@ -20,7 +16,7 @@ function formatoHora(h) {
   return h12 + ":00 " + sufijo;
 }
 
-// "2026-10-15" se convierte en "15/10/2026"
+
 function formatoFecha(iso) {
   const [a, m, d] = iso.split("-");
   return d + "/" + m + "/" + a;
@@ -33,17 +29,14 @@ function hoyISO() {
   return f.getFullYear() + "-" + mes + "-" + dia;
 }
 
-/* ===== Enlaces generales a WhatsApp (pie, botón flotante, contacto) ===== */
 document.querySelectorAll("[data-wa]").forEach(function (a) {
   a.href = enlaceWhatsApp("Hola " + CONFIG.nombreNegocio + ", quisiera información sobre sus servicios.");
   a.target = "_blank";
   a.rel = "noopener";
 });
 
-/* ===== Año del pie de página ===== */
 document.getElementById("anio").textContent = new Date().getFullYear();
 
-/* ===== Formulario de citas ===== */
 const form = document.getElementById("form-cita");
 const campoFecha = document.getElementById("fecha");
 const campoHora = document.getElementById("hora");
@@ -115,7 +108,7 @@ actualizarEncabezado();
 /* Elementos que aparecen al hacer scroll */
 if (!reducirMovimiento && "IntersectionObserver" in window) {
   const objetivos = document.querySelectorAll(
-    ".seccion h2, .seccion .intro, .servicio, .caso, .valor, .agenda__texto, .form, .pie__interior"
+    ".seccion h2, .seccion .intro, .linea__texto, .linea__media, .caso, .valor, .agenda__texto, .form, .pie__interior"
   );
 
   const observador = new IntersectionObserver(function (entradas) {

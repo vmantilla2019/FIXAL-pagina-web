@@ -10,16 +10,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="engranaje" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="84" fill="none" stroke="currentColor" stroke-width="22" stroke-dasharray="16.4935 16.4935"/>
+    <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="12"/>
+    <circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="10"/>
+  </symbol>
+  <symbol id="engranaje-grande" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="84" fill="none" stroke="currentColor" stroke-width="22" stroke-dasharray="10.9956 10.9956"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="12"/>
+  <circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="10"/>
+</symbol>
+</svg>
 <header class="encabezado oscuro">
   <div class="contenedor encabezado__interior">
     <a href="#inicio" class="logo-enlace" aria-label="FIXAL, ir al inicio">
       <img src="images/logo-blanco.png" alt="FIXAL">
     </a>
-    <nav class="menu" aria-label="Principal">
-      <a href="#servicios">Servicios</a>
-      <a href="#agenda">Agendar cita</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+<nav class="menu" aria-label="Principal">
+  <a href="#servicios">Servicios</a>
+  <a href="#trabajos">Trabajos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
     <a href="#agenda" class="btn btn--chico">Agendar cita</a>
   </div>
 </header>
@@ -27,6 +39,8 @@
   <section id="inicio" class="hero oscuro">
     <div class="hero__interior">
       <div class="hero__texto">
+        <svg class="engranaje hero__engranaje" viewBox="0 0 200 200" aria-hidden="true"><use href="#engranaje" width="200" height="200"/></svg>
+        <svg class="engranaje hero__engranaje hero__engranaje--grande" viewBox="0 0 200 200" aria-hidden="true"><use href="#engranaje-grande" width="200" height="200"/></svg>
         <p class="hero__marca">FIX<span>AL</span></p>
         <p class="hero__lema">Especialistas en soluciones industriales</p>
         <h1>Respaldo + Compromiso</h1>
@@ -42,57 +56,90 @@
   </section>
   <div class="franja" aria-hidden="true"></div>
 
-<section id="servicios" class="seccion">
-  <div class="contenedor">
+<section id="servicios" class="servicios-seccion">
+  <div class="contenedor servicios-seccion__intro">
     <h2>Nuestros servicios</h2>
-    <p class="intro">Cuatro áreas de especialidad para que su operación no se detenga.</p>
-
-    <div class="servicios">
-      <article class="servicio">
-        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2"/><path d="M6 16h36M6 22h36M6 28h36M6 34h36"/></svg>
-        <h3>Soluciones para muelles de carga</h3>
-        <ul>
-           <li>Fabricación de sellos de andén a medida</li>
-           <li>Instalación y mantenimiento de sellos de andén</li>
-           <li>Instalación y mantenimiento de rampas niveladoras</li>
-           <li>Instalación y mantenimiento de puertas seccionales</li>
-           <li>Instalación y mantenimiento de cortinas enrollables</li>
-           <li>Instalación y mantenimiento de cortinas de aire</li>
-           <li>Instalación de lámparas para andén</li>
-        </ul>
-      </article>
-
-      <article class="servicio">
-        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="4"/><path d="M24 20c-2-8 2-14 8-14 4 0 4 6-2 10l-4 4zM28 24c8-2 14 2 14 8 0 4-6 4-10-2l-4-4zM24 28c2 8-2 14-8 14-4 0-4-6 2-10l4-4zM20 24c-8 2-14-2-14-8 0-4 6-4 10 2l4 4z"/></svg>
-        <h3>Climatización / HVAC</h3>
-        <ul>
-         <li>Instalación y mantenimiento de aires acondicionados</li>
-         <li>Sistemas extractores de aire industrial</li>
-         <li>Sistemas inyectores de aire y ventilación forzada</li>
-        </ul>
-      </article>
-
-      <article class="servicio">
-        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4L10 27h12l-3 17 19-24H26z"/></svg>
-        <h3>Soluciones electromecánicas</h3>
-        <ul>
-         <li>Electricidad industrial: instalaciones, mantenimiento y corrección de fallas</li>
-         <li>Automatización eléctrica: tableros de control, PLCs y sistemas de mando</li>
-        <li>Mantenimiento integral de montacargas</li>
-        </ul>
-      </article>
-
-      <article class="servicio">
-        <svg class="icono" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="30" height="12" rx="2"/><path d="M36 12h6v12H24v8"/><rect x="20" y="32" width="8" height="12" rx="1"/></svg>
-        <h3>Pintura</h3>
-        <ul>
-         <li>Pintura industrial: preparación de superficies y recubrimientos protectores y anticorrosivos</li>
-         <li>Intervenciones técnicas especiales bajo requerimiento</li>
-      </ul>
-      </article>
-    </div>
+    <p class="intro">Cuatro líneas de especialidad para que su operación no se detenga.</p>
   </div>
+
+  <article class="linea">
+    <div class="linea__texto">
+      <h3>Soluciones para muelles de carga</h3>
+      <p>Somos especialistas en la fabricación, instalación y mantenimiento de todos los elementos que conforman un muelle de carga eficiente y seguro.</p>
+      <ul>
+        <li>Fabricación de sellos de andén a medida</li>
+        <li>Instalación y mantenimiento de sellos de andén</li>
+        <li>Instalación y mantenimiento de rampas niveladoras</li>
+        <li>Instalación y mantenimiento de puertas seccionales</li>
+        <li>Instalación y mantenimiento de cortinas enrollables</li>
+        <li>Instalación y mantenimiento de cortinas de aire</li>
+        <li>Instalación de lámparas para andén</li>
+      </ul>
+    </div>
+    <div class="linea__media">
+      <img src="images/sello-de-anden.jpg" alt="Sello de andén con el logo de FIXAL instalado en un muelle de carga" loading="lazy">
+    </div>
+  </article>
+
+  <article class="linea linea--invertida">
+    <div class="linea__texto">
+      <h3>Climatización / HVAC</h3>
+      <p>Control eficiente del ambiente en instalaciones industriales y comerciales. Garantizamos confort, eficiencia energética y continuidad operativa.</p>
+      <ul>
+        <li>Instalación y mantenimiento de aires acondicionados</li>
+        <li>Sistemas extractores de aire industrial</li>
+        <li>Sistemas inyectores de aire y ventilación forzada</li>
+      </ul>
+    </div>
+    <div class="linea__media linea__media--grafico" aria-hidden="true">
+      <svg class="engranaje" viewBox="0 0 200 200"><use href="#engranaje" width="200" height="200"/></svg>
+      <svg class="linea__icono" viewBox="0 0 48 48"><circle cx="24" cy="24" r="4"/><path d="M24 20c-2-8 2-14 8-14 4 0 4 6-2 10l-4 4zM28 24c8-2 14 2 14 8 0 4-6 4-10-2l-4-4zM24 28c2 8-2 14-8 14-4 0-4-6 2-10l4-4zM20 24c-8 2-14-2-14-8 0-4 6-4 10 2l4 4z"/></svg>
+    </div>
+  </article>
+
+  <article class="linea">
+    <div class="linea__texto">
+      <h3>Soluciones electromecánicas</h3>
+      <p>Intervenciones técnicas especializadas en sistemas eléctricos industriales, automatización y equipos de manejo de materiales.</p>
+      <ul>
+        <li>Electricidad industrial: instalaciones, mantenimiento y corrección de fallas</li>
+        <li>Automatización eléctrica: tableros de control, PLCs y sistemas de mando</li>
+        <li>Mantenimiento integral de montacargas: revisión, reparación y puesta a punto</li>
+      </ul>
+    </div>
+    <div class="linea__media linea__media--grafico" aria-hidden="true">
+      <svg class="engranaje" viewBox="0 0 200 200"><use href="#engranaje" width="200" height="200"/></svg>
+      <svg class="linea__icono" viewBox="0 0 48 48"><path d="M27 4L10 27h12l-3 17 19-24H26z"/></svg>
+    </div>
+  </article>
+
+  <article class="linea linea--invertida">
+    <div class="linea__texto">
+      <h3>Pintura</h3>
+      <p>Soluciones de acabado y preparación de superficies industriales con estándares técnicos exigentes.</p>
+      <ul>
+        <li>Pintura industrial: preparación de superficies y aplicación de recubrimientos protectores y anticorrosivos</li>
+        <li>Intervenciones técnicas especiales bajo requerimiento del cliente</li>
+      </ul>
+    </div>
+    <div class="linea__media linea__media--grafico" aria-hidden="true">
+      <svg class="engranaje" viewBox="0 0 200 200"><use href="#engranaje" width="200" height="200"/></svg>
+      <svg class="linea__icono" viewBox="0 0 48 48"><rect x="6" y="6" width="30" height="12" rx="2"/><path d="M36 12h6v12H24v8"/><rect x="20" y="32" width="8" height="12" rx="1"/></svg>
+    </div>
+  </article>
 </section>
+<div class="cinta" aria-hidden="true">
+  <div class="cinta__pista">
+    <span>Muelles de carga</span>
+    <span>Climatización HVAC</span>
+    <span>Soluciones electromecánicas</span>
+    <span>Pintura industrial</span>
+    <span>Muelles de carga</span>
+    <span>Climatización HVAC</span>
+    <span>Soluciones electromecánicas</span>
+    <span>Pintura industrial</span>
+  </div>
+</div>
 <section id="agenda" class="seccion">
   <div class="contenedor agenda">
     <div class="agenda__texto">
