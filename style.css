@@ -606,7 +606,7 @@ input:user-invalid, select:user-invalid { border-color: #b3261e; }
 .virtud h4 { margin: 0 0 .25rem; font-size: 1.1rem; font-weight: 700; }
 .virtud p { margin: 0; color: #4a5057; }
 
-/* ===== Lo que podemos ofrecerle ===== */
+
 .ofrecemos { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
 .ofrecemos__texto {
   align-self: center;
