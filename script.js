@@ -106,7 +106,7 @@ actualizarEncabezado();
 
 if (!reducirMovimiento && "IntersectionObserver" in window) {
   const objetivos = document.querySelectorAll(
-    ".seccion h2, .seccion .intro, .linea__texto, .linea__media, .caso, .valor, .agenda__texto, .form, .pie__interior,.sobre__intro, .pilar, .virtud, .ofrecemos__texto, .ofrecemos__media"
+    ".seccion h2, .seccion .intro, .linea__texto, .linea__media, .caso, .valor, .agenda__texto, .form, .pie__interior,.sobre__intro, .pilar, .virtud, .ofrecemos__texto, .ofrecemos__media,.oferta__texto, .oferta__foto, .beneficios h3, .beneficio"
   );
 
   const observador = new IntersectionObserver(function (entradas) {

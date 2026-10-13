@@ -660,3 +660,79 @@ input:user-invalid, select:user-invalid { border-color: #b3261e; }
 @media (max-width: 520px) {
   .virtudes { grid-template-columns: 1fr; }
 }
+/* ===== Lo que podemos ofrecerle ===== */
+.oferta { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+.oferta__interior {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.oferta h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.05; letter-spacing: -.02em; margin-bottom: .6rem; }
+.oferta h2::after { content: ""; display: block; width: 100px; height: 4px; background: var(--amarillo); margin-top: 1rem; }
+.oferta__intro { font-size: 1.2rem; color: var(--gris-claro); margin: 1.25rem 0 2rem; max-width: 46ch; }
+
+.oferta__lista { list-style: none; padding: 0; margin: 0 0 2rem; }
+.oferta__lista li { position: relative; padding: 0 0 1.25rem 3rem; }
+.oferta__lista li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .1rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--amarillo);
+}
+.oferta__lista li::after {
+  content: "";
+  position: absolute;
+  left: .68rem;
+  top: .32rem;
+  width: .5rem;
+  height: .9rem;
+  border: solid var(--carbon);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.oferta__lista strong { display: block; font-size: 1.15rem; margin-bottom: .2rem; }
+.oferta__lista span { display: block; color: var(--gris-claro); max-width: 52ch; }
+
+.promesa {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 6px solid var(--amarillo);
+  background: var(--gris-oscuro);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.oferta__foto { position: sticky; top: 150px; margin: 0; z-index: 0; }
+.oferta__foto::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  background: var(--amarillo);
+}
+.oferta__foto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.beneficios { margin-top: clamp(3rem, 7vw, 5rem); }
+.beneficios h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.5rem; }
+.beneficios__lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; }
+.beneficio { background: var(--gris-oscuro); border-top: 4px solid var(--amarillo); padding: 1.25rem; }
+.beneficio h4 { margin: 0 0 .5rem; font-size: 1.05rem; }
+.beneficio p { margin: 0; color: var(--gris-claro); font-size: .95rem; }
+
+@media (max-width: 860px) {
+  .oferta__interior { grid-template-columns: 1fr; }
+  .oferta__foto { position: relative; top: auto; margin-top: .5rem; }
+  .oferta__foto::before { inset: .75rem -.75rem -.75rem .75rem; }
+  .oferta__foto img { aspect-ratio: 4 / 3; }
+}
