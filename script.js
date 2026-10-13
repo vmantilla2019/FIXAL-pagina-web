@@ -81,7 +81,7 @@ form.addEventListener("submit", function (e) {
   const ventana = window.open(url, "_blank");
   if (ventana) ventana.opener = null;
 
-  // Si el navegador bloquea la ventana, ofrecemos un enlace manual
+  
   estado.textContent = "";
   estado.append(
     ventana ? "Abrimos WhatsApp con su solicitud. Presione enviar allí para confirmar. " : "No se pudo abrir WhatsApp automáticamente. "
@@ -94,10 +94,9 @@ form.addEventListener("submit", function (e) {
   enlace.textContent = "Abrir WhatsApp con mi solicitud";
   estado.append(enlace);
 });
-/* ===== Animaciones ===== */
+
 const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* Encabezado que se compacta al bajar */
 const encabezado = document.querySelector(".encabezado");
 function actualizarEncabezado() {
   encabezado.classList.toggle("encabezado--compacto", window.scrollY > 40);
@@ -105,10 +104,9 @@ function actualizarEncabezado() {
 window.addEventListener("scroll", actualizarEncabezado, { passive: true });
 actualizarEncabezado();
 
-/* Elementos que aparecen al hacer scroll */
 if (!reducirMovimiento && "IntersectionObserver" in window) {
   const objetivos = document.querySelectorAll(
-    ".seccion h2, .seccion .intro, .linea__texto, .linea__media, .caso, .valor, .agenda__texto, .form, .pie__interior"
+    ".seccion h2, .seccion .intro, .linea__texto, .linea__media, .caso, .valor, .agenda__texto, .form, .pie__interior,.sobre__intro, .pilar, .virtud, .ofrecemos__texto, .ofrecemos__media"
   );
 
   const observador = new IntersectionObserver(function (entradas) {
